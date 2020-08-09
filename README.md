@@ -1,2 +1,5 @@
-
-# [KrazeyHazey.tv](https://twitch.tv/krazeyhazey.tv) <img src="assets/krazey.svg" alt="Krazey Hazey crane Logo" align="right" height="55">
+<p style="align: center">
+    <a href="https://twitch.tv/krazeyhazey" title="Watch Krazey Hazey on Twitch">
+        <img src="./assets/logo.svg" alt="Krazey Hazey crane Logo" width="100%">
+    </a>
+</p>
