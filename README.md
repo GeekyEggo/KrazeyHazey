@@ -1,3 +1,2 @@
-# KrazeyHazey
 
-All projects relating to [KrazeyHazey.tv](https://krazeyhazey.tv)
+# [KrazeyHazey.tv](https://twitch.tv/krazeyhazey.tv) <img src="assets/krazey.svg" alt="Krazey Hazey crane Logo" align="right" height="55">
