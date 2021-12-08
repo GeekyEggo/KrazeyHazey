@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Foldmas' Secret Santa 2021</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body class="p-3">
+    <div class="container text-center">
+        <div class="row align-items-center justify-content-center vh-100">
+            <div class="col-lg-6 col-sm-12 border border-success rounded alert-dark">
+                <div id="santa" class="alert d-none">
+                    <h1 class="text-danger mb-4">🎅 Secret Santa 🎁</h1>
+                    <p>
+                        Ho-ho-ho, Merry Chrismtas <strong id="sender" class="text-danger">&nbsp;</strong>!
+                    </p>
+                    <p>
+                        As I'm self-isolating at the moment, I need your help! I'd like you to buy a gift for <strong
+                            id="recipient" class="text-success">&nbsp;</strong>.
+                    </p>
+                    <p>
+                        They've kindly sent me their <a id="url" class="text-underline">Amazon wishlist</a> to help with
+                        ideas; if you have an idea of something they might like already, that's okay too!
+                    </p>
+                </div>
+                <div id="hello" class="alert d-none mb-0">
+                    Hello 👋
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(urlSearchParams.entries());
+
+        if (params.santa) {
+            const data = JSON.parse(atob(params.santa));
+
+            document.getElementById("sender").innerText = data.s;
+            document.getElementById("recipient").innerText = data.r;
+            document.getElementById("url").href = data.u;
+            document.getElementById("santa").classList.remove("d-none");
+        } else {
+            document.getElementById("hello").classList.remove("d-none");
+        }
+    </script>
+</body>
+
+</html>
